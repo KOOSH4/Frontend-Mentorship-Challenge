@@ -1,0 +1,35 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@mixin Flexes($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+$blueColor: #358cd3;
+$checkboxColor: #9e9e9e;
+$borderColortrans: #ffffff00;
+$boxtransColor: #def6fc85;
+$textColor: #3b3b3b;
+$btntextColor: #d3d3d3;
+$borderColor: #d3d3d3bb;
+$formColor: #ffffff6e;
+$inputplaceholdercolor: #353535;
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: $textColor;
+    background-size: 100%;
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    @include Flexes(column, flex-start, center);
+    min-height: 100vh;
+    main {
+        width: 100%;
+        height: 100vh;
+        @include Flexes(column, center, center);
+    }
+}
