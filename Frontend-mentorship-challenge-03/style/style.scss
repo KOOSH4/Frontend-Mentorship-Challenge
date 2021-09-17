@@ -83,7 +83,7 @@ hr {
     margin: 0.2rem;
 }
 #form-section {
-    min-width: 35%;
+    min-width: 50%;
     max-width: 50%;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -153,7 +153,6 @@ input[type="date"]:focus {
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        min-width: 90%;
         min-width: 95%;
         @include Flexes(column, center, center);
         .form-group {
@@ -181,7 +180,6 @@ input[type="date"]:focus {
     #form-section {
         margin-top: 8rem;
         padding: 1rem 0;
-        min-width: 70%;
         min-width: 95%;
         @include Flexes(column, center, center);
         .form-group {
@@ -202,13 +200,41 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
+// ======== Start Iphone xs ========
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    main {
+        margin-top: 5rem;
+    }
+    #form-section {
+        margin-top: 8rem;
+        padding: 1rem 0;
+        min-width: 95%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"],
+    input[type="email"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
+}
+// ======== end Iphone xs ========
 
 // ======== Ipad ========
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        min-width: 50%;
         min-width: 55%;
         @include Flexes(column, center, center);
         .form-group {
@@ -258,3 +284,4 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
+// ======== End  Ipad ========
