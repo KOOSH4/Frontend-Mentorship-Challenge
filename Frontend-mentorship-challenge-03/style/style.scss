@@ -14,7 +14,7 @@ $textColor: #3b3b3b;
 $btntextColor: #d3d3d3;
 $borderColor: #d3d3d3bb;
 $formColor: #ffffff6e;
-$inputplaceholdercolor: #353535;
+$inputplaceholdercolor: #2de009e3;
 
 body {
     font-family: "Roboto", sans-serif;
@@ -52,13 +52,16 @@ nav {
         list-style: none;
         @include Flexes(row, space-between, center);
         li {
+            @include Flexes(row, center, center);
             margin: 1rem 2rem;
             a {
                 @include Flexes(row, center, center);
                 flex-wrap: wrap;
                 text-decoration: none;
-                h2 {
+                span {
+                    font-size: 1.5rem;
                     margin-left: 0.2rem;
+                    text-align: center;
                 }
             }
         }
@@ -80,6 +83,8 @@ hr {
     margin: 0.2rem;
 }
 #form-section {
+    min-width: 35%;
+    max-width: 50%;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -99,6 +104,7 @@ fieldset {
     margin: 1rem;
     label {
         margin-bottom: 0.75rem;
+        text-align: center;
     }
 }
 
@@ -125,9 +131,8 @@ fieldset {
     color: #212529;
 }
 
-select,
-input[type="date"],
-input[type="email"] {
+input[name="country"],
+input[type="date"] {
     width: 100%;
     margin: 0.5rem;
     height: 2.5rem;
@@ -136,6 +141,120 @@ input[type="email"] {
     background-color: $formColor;
     outline: none;
     border: 1px solid $borderColortrans;
-    color: $inputplaceholdercolor;
+    color: $textColor;
     transition: all 0.3s ease-in-out;
+}
+input[name="country"]:focus,
+input[type="date"]:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    #form-section {
+        margin-top: 1rem;
+        padding: 1rem 0;
+        min-width: 90%;
+        min-width: 95%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"],
+    input[type="email"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    main {
+        margin-top: 5rem;
+    }
+    #form-section {
+        margin-top: 8rem;
+        padding: 1rem 0;
+        min-width: 70%;
+        min-width: 95%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"],
+    input[type="email"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
+}
+
+// ======== Ipad ========
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    #form-section {
+        margin-top: 1rem;
+        padding: 1rem 0;
+        min-width: 50%;
+        min-width: 55%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"],
+    input[type="email"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    main {
+        margin-top: 5rem;
+    }
+    #form-section {
+        margin-top: 2rem;
+        padding: 1rem 0;
+        min-width: 30%;
+        min-width: 35%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"],
+    input[type="email"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
 }

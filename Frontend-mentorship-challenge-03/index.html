@@ -25,8 +25,9 @@
                 class="navbar-logo-text"
               >
                 <img src="img/logo.png" class="navbar-logo" />
-                <h2>Travel With Us</h2>
+                
               </a>
+              <span>Travel With Us</span>
             </li>
             <li>
               <button class="search-btn">
@@ -40,28 +41,55 @@
         <section id="form-section">
             <form class="form-group" action="">
               <fieldset>
-                <label for="Check-in-form" >Where you go?</label>
-                <select name="Check-in-form" required id="dropdown">
-                  <option value="Check-in-form" disabled selected>
-                    Select a Region
-                  </option>
-                  <option value="Iran">Iran</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Brazil">Brazil</option>
-                  <option value="Sweden">Sweden</option>
-                </select>
+                <label for="country">Type a country</label>
+<input list="countries" id="country" placeholder="Select a Region" name="country" required/>
+<datalist id="countries">
+  <option value="USA">
+  <option value="United Kingdom">
+  <option value="France">
+  <option value="Iran">
+  <option value="Germany">
+  <option value="Australia">
+  <option value="Turkey">
+  <option value="Austria">
+  <option value="Norway">
+  <option value="Sweden">
+  <option value="China">
+  <option value="Netherland">
+  <option value="Finland">
+  <option value="Iraq">
+  <option value="Irland">
+  <option value="Swiss">
+  <option value="Brazil">
+  <option value="Argentina">
+  <option value="Japan">
+  <option value="Korea">
+  <option value="Kanada">
+  <option value="Mexico">
+  <option value="Peru">
+  <option value="Argentina">
+  <option value="Greenland">
+  <option value="Russia">
+  <option value="Italy">
+  <option value="Greek">
+  <option value="Albania">
+  <option value="Philipin">
+  <option value="India">
+</datalist>
+
               </fieldset>
+              <div class="vl"></div>
               <!-- <hr> -->
               <fieldset class="form-input-field">
                 <label for="Check-in-form" >Check in</label>
-                <input type="date" id="Check-in-form">
+                <input type="date" id="Check-in-form" required>
 
               </fieldset >
+              <div class="vl"></div>
               <!-- <hr> -->
               <fieldset>
                 <label for="Check-in-form" >Check out</label>
-                <input type="date" id="Check-in-form">
+                <input type="date" id="Check-in-form" required>
               </fieldset>
               <!-- <hr> -->
               <fieldset>
