@@ -149,7 +149,7 @@ hr {
 }
 
 #form-section {
-  min-width: 50%;
+  min-width: 40%;
   max-width: 50%;
   background: rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -298,8 +298,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
@@ -350,8 +349,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
@@ -402,8 +400,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
@@ -451,8 +448,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
@@ -504,8 +500,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
@@ -515,6 +510,103 @@ input[type="date"]:focus {
     max-width: 3rem;
     margin: 0.2rem;
   }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (orientation: portrait) {
+  #form-section {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    max-width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #form-section .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  input[name="country"],
+  input[type="date"] {
+    width: 50%;
+  }
+  .navbar-logo {
+    height: 2rem;
+    width: 2rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    margin: 0.2rem;
+  }
+}
+
+@media only screen and (min-device-width: 740px) and (max-device-width: 740px) and (orientation: landscape) {
+  #form-section {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    max-width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #form-section .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  input[name="country"],
+  input[type="date"] {
+    width: 50%;
+  }
+  .navbar-logo {
+    height: 2rem;
+    width: 2rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    margin: 0.2rem;
+  }
+  /* Your Styles... */
 }
 
 @media screen and (max-width: 1366px) {
@@ -554,8 +646,7 @@ input[type="date"]:focus {
     width: 100%;
   }
   input[name="country"],
-  input[type="date"],
-  input[type="email"] {
+  input[type="date"] {
     width: 50%;
   }
   .navbar-logo {
