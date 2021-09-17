@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Travel With US</title>
+  </head>
+  <body>
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="https://www.germany.travel/en/home.html"
+                class="navbar-logo-text"
+              >
+                <img src="img/logo.png" class="navbar-logo" />
+                <h2>Travel With Us</h2>
+              </a>
+            </li>
+            <li>
+              <button class="search-btn">
+                <span>Account</span><i class="fas fa-house-user fa-lg"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section id="form-section">
+            <form class="form-group" action="">
+              <fieldset>
+                <label for="Check-in-form" >Where you go?</label>
+                <select name="Check-in-form" required id="dropdown">
+                  <option value="Check-in-form" disabled selected>
+                    Select a Region
+                  </option>
+                  <option value="Iran">Iran</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Sweden">Sweden</option>
+                </select>
+              </fieldset>
+              <!-- <hr> -->
+              <fieldset class="form-input-field">
+                <label for="Check-in-form" >Check in</label>
+                <input type="date" id="Check-in-form">
+
+              </fieldset >
+              <!-- <hr> -->
+              <fieldset>
+                <label for="Check-in-form" >Check out</label>
+                <input type="date" id="Check-in-form">
+              </fieldset>
+              <!-- <hr> -->
+              <fieldset>
+                <button class="search-btn">Search</button>
+              </fieldset>
+            </form>
+        </section>
+    </main>
+  </body>
+</html>
