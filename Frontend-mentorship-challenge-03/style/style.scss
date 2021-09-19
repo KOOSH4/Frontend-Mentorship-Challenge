@@ -68,14 +68,6 @@ nav {
         }
     }
 }
-hr {
-    width: 50%;
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 0;
-    transform: rotate(90deg);
-    border-color: #1a85fd;
-}
 .navbar-logo {
     height: auto;
     width: auto;
@@ -334,3 +326,34 @@ input[type="date"]:focus {
 }
 // ======== Start Iphone xs ========
 
+@media only screen 
+
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+      header {
+          position:sticky;
+      }
+
+    #form-section {
+        margin: 5rem 0;
+        padding: 1rem 0;
+        min-width: 65%;
+        @include Flexes(column, center, center);
+        .form-group {
+            @include Flexes(column, center, center);
+            width: 100%;
+        }
+    }
+    input[name="country"],
+    input[type="date"] {
+        width: 50%;
+    }
+    .navbar-logo {
+        height: 2rem;
+        width: 2rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        margin: 0.2rem;
+    }
+}

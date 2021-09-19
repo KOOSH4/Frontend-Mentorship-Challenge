@@ -131,16 +131,6 @@ nav ul li a span {
   text-align: center;
 }
 
-hr {
-  width: 50%;
-  margin: auto;
-  margin-top: 10%;
-  margin-bottom: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  border-color: #1a85fd;
-}
-
 .navbar-logo {
   height: auto;
   width: auto;
@@ -537,6 +527,58 @@ input[type="date"]:focus {
     margin-top: 1rem;
     padding: 1rem 0;
     min-width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #form-section .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  input[name="country"],
+  input[type="date"] {
+    width: 50%;
+  }
+  .navbar-logo {
+    height: 2rem;
+    width: 2rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    margin: 0.2rem;
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  #form-section {
+    margin: 5rem 0;
+    padding: 1rem 0;
+    min-width: 65%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
