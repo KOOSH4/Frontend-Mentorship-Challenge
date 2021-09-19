@@ -14,6 +14,7 @@ a {
 }
 
 body {
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #3b3b3b;
   background-size: 100%;
@@ -71,8 +72,8 @@ h1 {
   width: 60%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   grid-gap: 2rem;
   background: rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -84,8 +85,8 @@ h1 {
 }
 
 .gallery-item {
-  padding: 3rem 0;
-  margin: 2rem 1rem;
+  padding: 0.5rem 0;
+  margin: 1rem 0.5rem;
   text-align: center;
   display: inline-block;
 }
@@ -101,22 +102,21 @@ h1 {
 .gallery-image {
   display: block;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
   margin-bottom: 1rem;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.603);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.603);
-  -webkit-transition: -webkit-transform 900ms ease-in-out;
-  transition: -webkit-transform 900ms ease-in-out;
-  transition: transform 900ms ease-in-out;
-  transition: transform 900ms ease-in-out, -webkit-transform 900ms ease-in-out;
+  -webkit-transition: -webkit-transform 450ms ease-in-out;
+  transition: -webkit-transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
 }
 
 .gallery-image:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
 }
 
 .git-btn {
@@ -143,5 +143,21 @@ h1 {
 .git-btn:hover {
   background: rgba(206, 206, 206, 0.493);
   color: #212529;
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    width: 90%;
+    padding: 0.5rem;
+  }
+  .heading {
+    width: 90%;
+  }
+  .gallery-item {
+    padding: 0.1rem;
+    margin: 0.3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
