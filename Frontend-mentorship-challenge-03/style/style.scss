@@ -94,17 +94,22 @@ hr {
     @include Flexes(row, center, center);
 }
 .form-group {
-    @include Flexes(row, center, center);
+    @include Flexes(row, center, flex-end);
     margin: 1rem 2rem;
 }
 fieldset {
     width: 100%;
+    height: 100%;
     border: none;
     @include Flexes(column, center, center);
     margin: 1rem;
+    position:relative;
     label {
         margin-bottom: 0.75rem;
         text-align: center;
+    }
+    button{
+        margin: 0.5rem;
     }
 }
 
