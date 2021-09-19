@@ -46,6 +46,7 @@ header {
 
 nav {
     width: 100%;
+    z-index: 3;
     @include Flexes(row, space-around, flex-start);
     ul {
         width: 100%;
@@ -170,21 +171,24 @@ input[type="date"]:focus {
  :-ms-input-placeholder {  
     text-align: center; 
  }
-// ====== Start Media Queries For Iphone 6 7 8 =====
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+
+
+ // =========== Laptops ========== 
+@media screen and (max-width: 1600px) {
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        min-width: 95%;
-        @include Flexes(column, center, center);
+        min-width: 70%;
+        @include Flexes(row, center, center);
         .form-group {
-            @include Flexes(column, center, center);
+            @include Flexes(row, center, flex-end);
             width: 100%;
         }
     }
     input[name="country"],
     input[type="date"] {
-        width: 50%;
+        width: 100%;
     }
     .navbar-logo {
         height: 2rem;
@@ -194,17 +198,14 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    main {
-        margin-top: 5rem;
-    }
+@media screen and (max-width: 1080px) {
     #form-section {
-        margin-top: 8rem;
+        margin-top: 1rem;
         padding: 1rem 0;
-        min-width: 95%;
+        min-width: 45%;
         @include Flexes(column, center, center);
         .form-group {
-            @include Flexes(column, center, center);
+            @include Flexes(column, center, flex-end);
             width: 100%;
         }
     }
@@ -220,43 +221,13 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
-// ====== End Media Queries For Iphone 6 7 8 =====
+// =========== Laptops ========== 
 
-// ======== Start Iphone xs ========
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-    main {
-        margin-top: 5rem;
-    }
-    #form-section {
-        margin-top: 8rem;
-        padding: 1rem 0;
-        min-width: 95%;
-        @include Flexes(column, center, center);
-        .form-group {
-            @include Flexes(column, center, center);
-            width: 100%;
-        }
-    }
-    input[name="country"],
-    input[type="date"] {
-        width: 50%;
-    }
-    .navbar-logo {
-        height: 2rem;
-        width: 2rem;
-        max-height: 3rem;
-        max-width: 3rem;
-        margin: 0.2rem;
-    }
-}
-// ======== end Iphone xs ========
-
-// ======== Ipad ========
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        min-width: 55%;
+        min-width: 70%;
         @include Flexes(column, center, center);
         .form-group {
             @include Flexes(column, center, center);
@@ -283,8 +254,7 @@ input[type="date"]:focus {
     #form-section {
         margin-top: 2rem;
         padding: 1rem 0;
-        min-width: 30%;
-        min-width: 35%;
+        min-width: 70%;
         @include Flexes(column, center, center);
         .form-group {
             @include Flexes(column, center, center);
@@ -303,14 +273,18 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
-// ======== End  Ipad ========
-
-// ======== Start Galaxy s9 =======
-@media only screen and (min-device-width: 360px) and (max-device-width: 740px) and (orientation: portrait) {
+// ========End  Ipad ========
+// ====== Start Media Queries For Iphone 6 7 8 =====
+// ====== End Media Queries For Iphone 6 7 8 =====
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        max-width: 95%;
+        min-width: 95%;
         @include Flexes(column, center, center);
         .form-group {
             @include Flexes(column, center, center);
@@ -329,11 +303,17 @@ input[type="date"]:focus {
         margin: 0.2rem;
     }
 }
-@media only screen and (min-device-width: 740px) and (max-device-width: 740px) and (orientation: landscape) {
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
     #form-section {
         margin-top: 1rem;
         padding: 1rem 0;
-        max-width: 95%;
+        min-width: 95%;
         @include Flexes(column, center, center);
         .form-group {
             @include Flexes(column, center, center);
@@ -351,32 +331,6 @@ input[type="date"]:focus {
         max-width: 3rem;
         margin: 0.2rem;
     }
-    /* Your Styles... */
 }
-// ======== End Start Galaxy s9 =======
+// ======== Start Iphone xs ========
 
-// ======== Start Free Responsive Laptop =======
-@media screen and (max-width: 1366px) {
-    #form-section {
-        margin-top: 2rem;
-        padding: 1rem 0;
-        min-width: 30%;
-        min-width: 35%;
-        @include Flexes(column, center, center);
-        .form-group {
-            @include Flexes(column, center, center);
-            width: 100%;
-        }
-    }
-    input[name="country"],
-    input[type="date"] {
-        width: 50%;
-    }
-    .navbar-logo {
-        height: 2rem;
-        width: 2rem;
-        max-height: 3rem;
-        max-width: 3rem;
-        margin: 0.2rem;
-    }
-}
