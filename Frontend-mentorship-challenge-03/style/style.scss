@@ -148,13 +148,28 @@ input[type="date"] {
     border: 1px solid $borderColortrans;
     color: $textColor;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 input[name="country"]:focus,
 input[type="date"]:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     border: 1px solid rgba(81, 203, 238, 1);
 }
-
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
 // ====== Start Media Queries For Iphone 6 7 8 =====
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     #form-section {

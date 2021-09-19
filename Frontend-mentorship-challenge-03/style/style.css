@@ -259,6 +259,7 @@ input[type="date"] {
   color: #3b3b3b;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 input[name="country"]:focus,
@@ -266,6 +267,24 @@ input[type="date"]:focus {
   -webkit-box-shadow: 0 0 5px #51cbee;
           box-shadow: 0 0 5px #51cbee;
   border: 1px solid #51cbee;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
